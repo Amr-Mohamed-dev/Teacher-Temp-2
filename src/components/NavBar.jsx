@@ -74,7 +74,15 @@ const NavBar = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}>
-              <NameOfTeacher />
+              <div className="flex items-center justify-between">
+                <NameOfTeacher />
+                <XMarkIcon
+                  width={20}
+                  height={20}
+                  onClick={() => setMobileMenuOpen(false)}
+                />
+              </div>
+
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500/10">
                   <div className="space-y-2 py-6">
